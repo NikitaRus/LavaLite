@@ -1,0 +1,49 @@
+<%= form_for(@client) do |f| %>
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="clear-fix">
+    <label for="xlInput">Name</label>
+    <div class="input">
+      <input class="xlarge" id="client_name" name="xlInput" size="30" type="text">
+    </div>
+  </div>
+  <div class="clear-fix">
+    <%= f.label :id %><br />
+    <div class="input">
+      <input class="xlarge" id="client_id" name="xlInput" size="30" type="text">
+    </div>
+  </div>
+  <div class="clear-fix">
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </div>
+  <div class="clear-fix">
+    <%= f.label :phone %><br />
+    <%= f.text_area :phone %>
+  </div>
+  <div class="clear-fix">
+    <%= f.label :cellphone %><br />
+    <%= f.text_area :cellphone %>
+  </div>
+  <div class="clear-fix">
+    <%= f.label :email %><br />
+    <%= f.text_area :email %>
+  </div>
+  <div class="clear-fix">
+    <%= f.label :nid %><br />
+    <%= f.text_area :nid %>
+  </div>
+  <div class="clear-fix">
+    <%= f.submit %>
+  </div>
+<% end %>

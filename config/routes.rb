@@ -1,4 +1,7 @@
 LavaLite::Application.routes.draw do
+  resources :resources
+  resources :clients
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

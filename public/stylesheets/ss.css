@@ -12,7 +12,7 @@
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 html, body {
-  margin: 0;
+  margin: 40px;
   padding: 0;
 }
 h1,
@@ -181,7 +181,7 @@ textarea {
  * Basic and global styles for generating a grid system, structural layout, and page templates
  * ------------------------------------------------------------------------------------------- */
 html, body {
-  background-color: #ffffff;
+  background-color: #8A0808;
 }
 body {
   margin: 0;
@@ -409,7 +409,7 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  color: #404040;
+  color: grey;
 }
 h1 small,
 h2 small,
@@ -417,7 +417,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  color: #bfbfbf;
+  color: #404040;
 }
 h1 {
   margin-bottom: 18px;
@@ -1135,10 +1135,10 @@ table tbody tr:last-child td:last-child {
   border-radius: 0 0 4px 0;
 }
 .zebra-striped tbody tr:nth-child(odd) td {
-  background-color: #f9f9f9;
+  background-color: #610B0B;
 }
 .zebra-striped tbody tr:hover td {
-  background-color: #f5f5f5;
+  background-color: grey;
 }
 table .header {
   cursor: pointer;

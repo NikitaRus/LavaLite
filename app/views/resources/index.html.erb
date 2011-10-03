@@ -1,0 +1,43 @@
+<div class="page-header">
+  <h1>Listing resources</h1>
+</div>
+
+<table class="zebra-striped">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Availability</th>
+    <th>M</th>
+    <th>Tu</th>
+    <th>W</th>
+    <th>Th</th>
+    <th>F</th>
+    <th>Sa</th>
+    <th>Su</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resources.each do |resource| %>
+  <tr>
+    <td><%= resource.name %></td>
+    <td><%= resource.description %></td>
+    <td><%= resource.availability %></td>
+    <td><%= resource.m %></td>
+    <td><%= resource.tu %></td>
+    <td><%= resource.w %></td>
+    <td><%= resource.th %></td>
+    <td><%= resource.f %></td>
+    <td><%= resource.sa %></td>
+    <td><%= resource.su %></td>
+    <td><%= link_to 'Show', resource %></td>
+    <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+    <td><%= link_to 'Destroy', resource, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Resource', new_resource_path %>

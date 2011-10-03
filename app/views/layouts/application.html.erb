@@ -5,8 +5,32 @@
   <%= stylesheet_link_tag "ss" %>
 </head>
 <body>
-
-<%= yield %>
-
+  
+  <!-- NAVIGATION -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="#">LavaLite</a>
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="pull-right">Logged in as <a href="#">username</a></p>
+      </div>
+    </div>
+  </div></br>
+  
+  <div class="container-fluid">
+    <div class="sidebar">
+      <div class="well">
+        <h5><%= link_to clients_path, "clientes" %></h5>
+        <h5>Resources</h5>
+        <h5>Shifts</h5>
+      </div>
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
 </body>
 </html>
